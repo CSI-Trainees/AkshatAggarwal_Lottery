@@ -12,11 +12,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Indian Lottery</title>
+    <script>
+      function random()
+        {
+            document.getElementById("b").innerHTML=Math.floor(Math.random()*10)+1;
+        }
+        
+        function myFunction() { 
+            var x =  
+                document.getElementById("myText").value; 
+            if(x==7)
+                {
+                    document.getElementById( 
+              "demo").innerHTML = "Congratulations!! <br>You are the winner!"; 
+                    document.getElementById('loadingImage').style.visibility="visible";
+                }
+            else{
+                document.getElementById( 
+              "demo").innerHTML = "Better Luck Next Time :)"; 
+            }
+        } 
+      </script>
     
   </head>
   <body>
-     <div>
-      <div class="container">
+     <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
         <a class="navbar-brand display-1" href="#"><img src="img/lotto-india-logo.png" class="heading">
         </a>
@@ -53,6 +73,7 @@
   <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
   <strong>Alert!</strong> Due to corona virus all the casinos are closed right now. You are requested to play online. STAY SAFE!!
 </div>
+   <div class="container" id="photo">
     <div class="container-fluid">
   <div id="slides" class="carousel slide justify-content-center" data-ride="carousel">
       <ul class="carousel-indicators">
@@ -84,14 +105,14 @@
       </div>
           </div>
          </div>
-           <div class="container-fluid">      
+           <div class="container" id="hell" style="background-image: url(img/b3.jpg)">      
     <div id="middle-area">
             <div class="Box">
       <div class="ContentBox">
          <p class="Heading">ROUND 1<p>
          <hr/>
          <p class="Paragraph">Enter your details.</p>
-         <a href="#" class="Clickhere">Click Here!</a>
+         <a href="#first" class="Clickhere">Click Here!</a>
       </div>
         </div>
         <div class="arrow">
@@ -102,7 +123,7 @@
          <p class="Heading">ROUND 2<p>
          <hr/>
          <p class="Paragraph">Find your Number.</p>
-         <a href="#" class="Clickhere">Click Here!</a>
+         <a href="#second" class="Clickhere">Click Here!</a>
       </div>
      </div>
      <div class="arrow">
@@ -113,13 +134,101 @@
          <p class="Heading">ROUND 3</p>
          <hr>
          <p class="Paragraph">Wait for the winner!</p>
-         <a href="#" class="Clickhere">Click Here!</a>
+         <a href="#three" class="Clickhere">Click Here!</a>
         </div>    
                 </div>
                 </div>
-         </div>
+           <div class="detailbox" id="first">
+              <div class="details">
+               <h1>Enter your details</h1>
+               <br>
+               <p>Name: <input class="detailinput"  type="text"></p>
+               <p>Age: <input class="detailinput"  type="text"></p>
+               <p>Gender: <input  class="detailinput" type="text"></p>
+               <p>Bidding Amount: <input class="detailinput" type="text"></p>
+               <button type="button">Submit!</button>
+           </div>
+           </div>
+           <div class="biddingbox" id="second">
+              <div class="enter">
+               <h1>Let's Begin!!</h1>
+               <br>
+               <p>Click the following button once for a random number :- </p>
+               <button id="a" type="button" onclick="random();">Click Me</button>
+               <h2 id="b">  </h2>
+           </div>
+           </div>
+           <form class="winningbox" id="three">
+               <h1>
+                   Check Out The Winners!!
+               </h1>
+               <br>
+               <p>Enter your number : </p>
+               <input type="text"
+           id="myText">
+  
+    <button type="button" 
+            onclick="myFunction()"> 
+      Check! 
+  </button> 
+  <br>
+  
+  <img id="loadingImage" src="img/winner.png" /> 
+  
+    <p id="demo"></p>
+               </form>
       </div>
-        
+      </div>
+<footer class="footer-base">
+
+			<div class="footer-left">
+
+				<img src="img/lotterylogo.svg">
+
+				<p class="footer-links">
+					<a href="#" class="link-1">Home</a>
+				
+					<a href="#">Winners</a>
+				
+					<a href="#">About</a>
+					
+					<a href="#">Contact Us</a>
+				</p>
+
+				<p class="footer-company-name">LottoIndia © 2020</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Hotel Park Avenue</span> Main Street, Las Vegas</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+911 986XXXXXXX</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@LottoIndia.com">support@LottoIndia.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+				</div>
+
+			</div>
+
+		</footer>
    
 
   
